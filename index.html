@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQArena - Ինտելեկտուալ Խաղ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>IQArena</h1>
+        <p>Ստեղծված է Anna Tukhtaryan-ի կողմից</p>
+    </header>
+
+    <section id="user-info">
+        <h2>Մուտք</h2>
+        <label>Անուն: <input type="text" id="username" placeholder="Գրեք ձեր անունը"></label><br>
+        <label>Տարիք: 
+            <select id="age">
+                <option value="7-14">7-14</option>
+                <option value="14-18">14-18</option>
+            </select>
+        </label><br>
+        <label>Սեռ: 
+            <select id="gender">
+                <option value="male">Արական</option>
+                <option value="female">Իգական</option>
+                <option value="other">Այլ</option>
+            </select>
+        </label><br>
+        <button id="startGame">Սկսել Խաղը</button>
+    </section>
+
+    <section id="game" style="display:none;">
+        <div id="question-container">
+            <h2 id="question-text">Հարցը կցուցադրվի այստեղ</h2>
+            <div id="answers">
+                <button class="answer-btn" id="answer1"></button>
+                <button class="answer-btn" id="answer2"></button>
+                <button class="answer-btn" id="answer3"></button>
+                <button class="answer-btn" id="answer4"></button>
+            </div>
+            <div id="timer">45 վայրկյան</div>
+        </div>
+        <div id="scoreboard">
+            <p>Միավորներ: <span id="score">0</span></p>
+            <p>Աստղեր: <span id="stars">0</span></p>
+        </div>
+        <div id="info">
+            <button id="toggleMusic">Երաժշտություն Ա/Ց</button>
+            <button id="changeBG">Փոխել Ֆոնը</button>
+        </div>
+    </section>
+
+    <section id="leaderboard" style="display:none;">
+        <h2>Բարձրագույն միավորները</h2>
+        <ul id="leaderboard-list"></ul>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
